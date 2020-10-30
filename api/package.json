@@ -1,0 +1,25 @@
+{
+  "name": "address-book",
+  "version": "1.0.0",
+  "description": "small address book api using hapi js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hapijs",
+    "nodejs"
+  ],
+  "author": "raju",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^20.0.1",
+    "joi": "^17.2.1",
+    "mongoose": "^5.10.9",
+    "nodemon": "^2.0.6"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
