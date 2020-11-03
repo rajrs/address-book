@@ -50,10 +50,10 @@ let contactRoute = (server) => {
             handler: async (request, h) => {
                 try {                 
                     var result = await contactModel.find().exec();
-                    console.log(result)
+                    //console.log(result)
                     return h.response(result)
                 } catch (err) {
-                    console.log('from catch block',err);
+                   // console.log('from catch block',err);
                     return h.response(err).code(500).takeover();
                 }
 
