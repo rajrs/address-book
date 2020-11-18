@@ -28,7 +28,7 @@ useEffect(() => {
                <Col md={8}>
                    <Row>
                    {contacts.map( (e,i) => { return  (<Col md={3} key={e._id}><Card body  ><h3> {e.name}</h3>
-                                    <p>{e.email}</p> <p>{e.list}</p></Card> </Col> )})}
+                     <p>{e.email}</p> <p>{e.list}</p></Card> </Col> )})}
                    </Row>
                
                </Col>

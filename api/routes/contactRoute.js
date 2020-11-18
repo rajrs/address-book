@@ -1,4 +1,4 @@
-let contactModel = require('../model/contact.model');
+let contactsModel = require('../model/contacts.model');
 const Joi = require("joi");
 let contactRoute = (server) => {
     return server.route([
@@ -13,11 +13,11 @@ let contactRoute = (server) => {
         },
         {
             method: 'POST',
-            path: "/contact/add",
+            path: "/contacts/add",
             handler: async (request, h) => {
                 try {
                    
-                    var contact = new contactModel(request.payload);
+                    var contact = new contactsModel(request.payload);
                     var result = await contact.save();
                     return h.response(result)
                 } catch (err) {
@@ -49,9 +49,9 @@ let contactRoute = (server) => {
             path: '/contacts',
             handler: async (request, h) => {
                 try {                 
-                    var result = await contactModel.find().exec();
+                    var result = await contactsModel.find().exec();
                     //console.log(result)
-                    return h.response(result)
+                    return h.response(result);
                 } catch (err) {
                    // console.log('from catch block',err);
                     return h.response(err).code(500).takeover();

@@ -20,6 +20,7 @@ let groupRoute = (server)=>{
         path:'/group/add',
         handler: async (request,h) => {
             try {
+                console.log('enter group add')
                 var group = new groupModel(request.payload);
                 let result = await group.save();
                 return h.response(result)
